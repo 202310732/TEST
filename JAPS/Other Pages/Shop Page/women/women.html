@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAPS - Women's Leather Shoes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="inline-nav">
+    <div class="inline-nav-links">
+        <a href="D:\JAPS\index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" id="shopDropdownBtn">Shop</button>
+            <div class="dropdown-content" id="shopDropdown">
+                <a href="D:\JAPS\Other Pages\Shop Page\men\index.html">Men</a>
+                <a href="D:\JAPS\Other Pages\Shop Page\women\women.html">Women</a> 
+                <a href="#">Accessories</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo">JAPS</div>
+    <div class="inline-nav-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#" class="login-icon">👤</a>
+    </div>
+</div>
+
+<!-- Product Section -->
+<section class="products-section">
+
+    
+    <div class="filters">
+        <label for="priceSort">Sort by Price:</label>
+        <select id="priceSort" onchange="sortProducts()">
+            <option value="default">Default</option>
+            <option value="lowToHigh">Low to High</option>
+            <option value="highToLow">High to Low</option>
+        </select>
+    </div>
+
+    <div class="products-container" id="productsContainer">
+        <!-- Product Cards -->
+        <a href="products/ankleboots.html" class="product-link">
+            <div class="product-card" data-price="4500">
+                <img src="images/Ankle-Boots.png" alt="Ankle Boots">
+                <h3>Ankle Boots</h3>
+                <p>PHP4,500.00</p>
+            </div>
+        </a>
+
+        <a href="products/pumpheel.html" class="product-link">
+            <div class="product-card" data-price="6200">
+                <img src="images/Pump-Heel.png" alt="Pump Heel">
+                <h3>Pump Heel</h3>
+                <p>PHP6,200.00</p>
+            </div>
+        </a>
+
+        <a href="products/kittenheels.html" class="product-link">
+            <div class="product-card" data-price="3800">
+                <img src="images/Womens-Kitten-Heels.png" alt="Kitten Heels">
+                <h3>Kitten Heels</h3>
+                <p>PHP3,800.00</p>
+            </div>
+        </a>
+
+        <a href="products/strappyflats.html" class="product-link">
+            <div class="product-card" data-price="5500">
+                <img src="images/Womens-Strappy-Flats.png" alt="Strappy Flats">
+                <h3>Strappy Flats</h3>
+                <p>PHP5,500.00</p>
+            </div>
+        </a>
+
+        <a href="products/midheelpumps.html" class="product-link">
+            <div class="product-card" data-price="7500">
+                <img src="images/Womens-Mid-Heel-Pumps.png" alt="Mid Heel Pumps">
+                <h3>Mid Heel Pumps</h3>
+                <p>PHP7,500.00</p>
+            </div>
+        </a>
+
+        <a href="products/flatloafers.html" class="product-link">
+            <div class="product-card" data-price="2800">
+                <img src="images/Womens-Flat-Loafers.png" alt="Flat Loafers">
+                <h3>Flat Loafers</h3>
+                <p>PHP2,800.00</p>
+            </div>
+        </a>
+
+        <a href="products/peeptoeheels.html" class="product-link">
+            <div class="product-card" data-price="6700">
+                <img src="images/Womens-Peep-Toe-Heels.png" alt="Peep Toe Heels">
+                <h3>Peep Toe Heels</h3>
+                <p>PHP6,700.00</p>
+            </div>
+        </a>
+
+        <a href="products/bucklemaryjanes.html" class="product-link">
+            <div class="product-card" data-price="5000">
+                <img src="images/Womens-Buckle-Mary-Janes.png" alt="Buckle Mary Janes">
+                <h3>Buckle Mary Janes</h3>
+                <p>PHP5,000.00</p>
+            </div>
+        </a>
+
+        <a href="products/slingbackflats.html" class="product-link">
+            <div class="product-card" data-price="2500">
+                <img src="images/Womens-Slingback-Flats.png" alt="Slingback Flats">
+                <h3>Slingback Flats</h3>
+                <p>PHP2,500.00</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 JAPS. All rights reserved.</p>
+</footer>
+
+<!-- Dropdown JS -->
+<script>
+document.querySelector('.dropbtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close dropdown if clicking outside
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (!dropdown.contains(event.target)) {
+        dropdownContent.style.display = 'none';
+    }
+});
+</script>
+
+<!-- Sorting Functionality -->
+<script>
+function sortProducts() {
+    const container = document.getElementById("productsContainer");
+    const cards = Array.from(container.getElementsByClassName("product-link"));
+
+    const sortBy = document.getElementById("priceSort").value;
+
+    cards.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector(".product-card").getAttribute("data-price"));
+        const priceB = parseFloat(b.querySelector(".product-card").getAttribute("data-price"));
+
+        if (sortBy === "lowToHigh") return priceA - priceB;
+        if (sortBy === "highToLow") return priceB - priceA;
+        return 0;
+    });
+
+    // Clear and re-append sorted products
+    container.innerHTML = "";
+    cards.forEach(card => container.appendChild(card));
+}
+</script>
+
+</body>
+</html>

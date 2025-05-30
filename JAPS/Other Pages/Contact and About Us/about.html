@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - JAPS</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .about-section {
+            padding: 40px 20px;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #333; 
+        }
+
+        .about-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .about-container p {
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 30px 0;
+            border-left: 4px solid #000;
+            padding-left: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="inline-nav">
+    <div class="inline-nav-links">
+        <a href="D:\JAPS\index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" id="shopDropdownBtn">Shop</button>
+            <div class="dropdown-content" id="shopDropdown">
+                <a href="D:\JAPS\Other Pages\Shop Page\men\index.html">Men</a>
+                <a href="D:\JAPS\Other Pages\Shop Page\women\women.html">Women</a>
+                <a href="#">Accessories</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo">JAPS</div>
+    <div class="inline-nav-links">
+        <a href="D:\JAPS\Other Pages\Contact and About Us\about.html">About Us</a>
+        <a href="D:\JAPS\Other Pages\Contact and About Us\contact.html">Contact Us</a>
+        <a href="#" class="login-icon">👤</a>
+    </div>
+</div>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="about-container">
+        <h2>Our Story</h2>
+
+        <p>
+            It all started in 1964 when brothers Florencio, Florentino, and Florinio Santiago established a business called Santiago Shoe Supply shop in Marikina which supplied leather and other shoe materials to other factories.
+        </p>
+
+        <p>
+            Business was very good, so Florinio and Florencio decided to have their own business venture and started their own shoe factory businesses while Florentino was left with the shoe supply shop. Florinio established F. Santiago Shoes in 1968 and because of his chinky eyes, he was always referred to as Hapon or Japs, short for Japanese. This was the reason why F. Santiago Shoes was later on known as Japs Shoes.
+        </p>
+
+        <p>
+            This was the time wherein the shoe business in Marikina was booming. He supplied shoes in SM, Rustan's, Robinsons, and other big companies. His shoes were shipped all over the country — from Manila to Cebu and other neighboring provinces. His business was affiliated with the Marikina Tourism Council, and all tourists visiting Marikina who wanted to see factories visited him for free. There would be tours around the factories for kids, students, ambassadors from other countries, celebrities, Miss Universe candidates, and even the iconic Imelda Marcos herself — well known for her vast collection of shoes.
+        </p>
+
+        <p class="quote">
+            “He chose to keep the business that he loved instead of starting a different business.”
+        </p>
+
+        <p>
+            Business was doing good until the importation of shoes from China to Marikina happened. People began to patronize cheap shoes from China rather than the durable shoes made in Marikina. This caused the downfall of Mang Japs' business. But because of his love for shoes, he did not give up. He fought for it and kept it going even if he wasn’t doing as well as before. He chose to keep the business that he loved instead of starting a different business. He was getting by until the storm that Marikeños would never forget hit his factory. His entire shop and factory were submerged in water and shoes were floating around. This storm hit his business hard, but he still didn't give it up. He managed to get small clients and took on made-to-order gigs which kept him afloat.
+        </p>
+
+        <p>
+            In August 2, 2017, Florinio — our beloved grandfather — died suddenly from a heart attack. He kept the business that he loved until the day he died. On June 6, 2017, my Tatay and my Dad had one of their last conversations. Our Tatay made my dad promise that he would continue his legacy — that he wouldn't let his shoe business be forgotten. A year and a half after Tatay's death, my Dad and I are trying to bring the business back. We are working hard to re-establish it because we want to honor his promise.
+        </p>
+
+        <p>
+            Please support our business. We guarantee durable and beautiful Marikina-made shoes. Let’s help bring Marikina back as the leading supplier of the best quality shoes in the Philippines.
+        </p>
+
+        <p style="text-align:center; font-weight:bold; margin-top: 30px;">
+            Thank you for supporting local. Thank you for supporting JAPS.
+        </p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 JAPS. All rights reserved.</p>
+</footer>
+
+<!-- Dropdown JS -->
+<script>
+document.querySelector('.dropbtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (!dropdown.contains(event.target)) {
+        dropdownContent.style.display = 'none';
+    }
+});
+</script>
+
+</body>
+</html>

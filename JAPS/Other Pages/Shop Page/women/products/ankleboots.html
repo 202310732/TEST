@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankle Boots - JAPS</title>
+    <link rel="stylesheet" href="womenshopcss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="inline-nav">
+    <div class="inline-nav-links">
+        <a href="D:\JAPS\index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" id="shopDropdownBtn">Shop</button>
+            <div class="dropdown-content" id="shopDropdown">
+                <a href="D:\JAPS\Other Pages\Shop Page\men\index.html">Men</a>
+                <a href="D:\JAPS\Other Pages\Shop Page\women\women.html">Women</a> 
+                <a href="#">Accessories</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo">JAPS</div>
+    <div class="inline-nav-links">
+       <a href="D:\JAPS\Other Pages\Contact and About Us\about.html">About Us</a>
+        <a href="D:\JAPS\Other Pages\Contact and About Us\contact.html">Contact Us</a>
+        <a href="#" class="login-icon">👤</a>
+    </div>
+</div>
+
+<section class="product-detail">
+    <div class="product-detail-container">
+        <img src="images/Ankle-Boots.png" alt="Ankle Boots" class="product-image">
+        <div class="product-info">
+            <h2>Ankle Boots</h2>
+            <p class="price">PHP4,500.00</p>
+            <p class="description">
+                Trendy ankle boots in premium leather with a sleek silhouette, great for both day and night looks.
+            </p>
+            <div class="product-actions">
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 JAPS. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelector('.dropbtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (!dropdown.contains(event.target)) {
+        dropdownContent.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html>
